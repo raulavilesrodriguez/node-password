@@ -17,6 +17,7 @@ exports.up = function(knex) {
       //columna con la key de la tabla 'lessons'
       tbl.integer('lesson_id')
       .unsigned()
+      .notNullable()
       .references('id')
       .inTable('lessons')
       .onDelete('CASCADE')  //especifica que los datos secundarios se eliminan cuando se eliminan los datos principales.
